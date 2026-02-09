@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Grandstander:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <!-- PyScript -->
+    <link rel="stylesheet" href="https://pyscript.net/releases/2025.7.3/core.css">
+    <script type="module" src="https://pyscript.net/releases/2025.7.3/core.js"></script>
+
+    <title>Account Creation</title>
+<style>
+    body {
+        margin: 0;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: "Grandstander", cursive;
+        background-color: #111;
+    }
+
+    .container {
+        background-color: #1b1b1b;
+        padding: 30px 35px;
+        border-radius: 12px;
+        width: 340px;
+        border: 1px solid #ff69b4;
+    }
+
+    h1 {
+        margin: 0 0 20px 0;
+        color: #ff69b4;
+        font-size: 28px;
+        text-align: center;
+    }
+
+    .form {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    label {
+        color: #ddd;
+        font-size: 14px;
+    }
+
+    input {
+        padding: 8px;
+        border-radius: 6px;
+        border: 1px solid #ff69b4;
+        background-color: #111;
+        color: white;
+        font-family: "Grandstander", cursive;
+    }
+
+    button {
+        margin-top: 12px;
+        padding: 10px;
+        border: none;
+        border-radius: 6px;
+        background-color: #ff69b4;
+        color: #111;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    #output {
+        margin-top: 12px;
+        color: #ffb6d9;
+        font-size: 14px;
+        text-align: center;
+    }
+</style>
+<body>
+    <div class="container">
+        <h1>Create Account</h1>
+
+        <div class="form">
+            <label>Username:</label>
+            <input type="text" id="username">
+
+            <label>Password:</label>
+            <input type="password" id="password">
+
+            <button py-click="account_authenticator">Create Account</button>
+
+            <p id="output"></p>
+        </div>
+
+        <py-script src="main.py"></py-script>
+    </div>
+</body>
